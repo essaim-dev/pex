@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package essaim.pex.v1;
+
+import "essaim/pex/v1/pubsub.proto";
+import "google/protobuf/descriptor.proto";
+
+option go_package = "go.essaim.dev/pex/api/essaim/pex/v1;pexpb";
+
+extend google.protobuf.MethodOptions {
+  PubSubRule pubsub = 420019;
+}
